@@ -1,0 +1,42 @@
+
+  
+  .Cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Si deseas que las tarjetas tengan un ancho fijo, puedes agregar lo siguiente:
+    gap: 16px; (o el valor que prefieras)
+    */
+  }
+
+  .Order{
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e00101;
+    color: white;
+    font-size: 18px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+  .orderType:hover{
+    background-color: #2980b9;
+}
+
+.orderName{
+  padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.page{
+  color: white;
+  font-family: cursive;
+  background-color: black;
+}

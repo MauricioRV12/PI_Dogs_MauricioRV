@@ -1,0 +1,35 @@
+.div{
+    width: 20.5vw;
+    height: 22vw;
+    background-color: rgba(250,250,250,.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0.1);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 5rem 0;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px;
+    
+  }
+  
+  .name{
+    font-size: 1.0em;
+    position: absolute;
+    bottom: 3vh;
+    color: black;
+  }
+  
+  .image{
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .cont{
+    bottom: 1vh;
+    position: absolute;
+    color: black;
+  }
+  
