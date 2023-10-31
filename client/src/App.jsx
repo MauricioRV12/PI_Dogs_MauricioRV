@@ -16,7 +16,6 @@ const App = () => {
       .then((response) => {
         const data = response.data;
         setDogs(data); 
-        console.log(data);
       })
       .catch((error) => {
         console.error(error.message);

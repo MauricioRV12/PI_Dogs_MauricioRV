@@ -4,6 +4,7 @@ const { getDogsById } = require('../controllers/getDogsById');
 const { getDogsByName } = require('../controllers/getDogsByName');
 const { getTemperaments } = require('../controllers/getTemperaments');
 const { postDogs } = require('../controllers/postDogs');
+const { getDogsDB } = require('../controllers/getDogsDB');
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -20,6 +21,8 @@ router.get('/dogs/:id', getDogsById);
 router.get('/temperaments', getTemperaments);
 
 router.post('/dogs', postDogs);
+
+router.get('/dogsdb', getDogsDB);
 
 
 module.exports = router;

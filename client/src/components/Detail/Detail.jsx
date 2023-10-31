@@ -21,7 +21,7 @@ const Detail = () => {
             if (data.name) {
               setDog(data);
             } else {
-              window.alert('No hay razas de perro con ese ID');
+              window.alert('No hay razas de perro con ese nombre');
             }
           })
           .catch(error => {

@@ -2,6 +2,8 @@ const initialState = {
     filterDogs: [],
     dogs: [],
     newDog: {},
+    temperaments: [],
+    dataSource: "API"
 };
 
 const reducer = (state = initialState, action) => {
@@ -9,8 +11,9 @@ const reducer = (state = initialState, action) => {
         case "FILTER":
             return {
                 ...state,
-                dogs: action.payload,
-            };
+                filterDogs: action.payload,
+            };          
+
         case "ORDER":
             const allDogsCopy = [...state.dogs]
             return {
@@ -27,6 +30,7 @@ const reducer = (state = initialState, action) => {
                     return 0;
                 })
             };
+
         case "ORDER_WEIGHT":
             const dogsWeightCopy = [...state.dogs];
             return {
@@ -43,17 +47,27 @@ const reducer = (state = initialState, action) => {
                     return weightB - weightA;
                  })
             };
+
         case "ADD_DOG":
             return {
                 ...state,
                 newDog: action.payload
             };
+
         case "SET_DOGS":
             return {
                 ...state,
                 filterDogs: action.payload,
                 dogs: action.payload
             };
+
+/********************************************************************* */
+        case "CHANGE_DATA_SOURCE":
+            return {
+                ...state,
+                dataSource: action.payload,
+            };
+
         default:
             return {...state}
     };

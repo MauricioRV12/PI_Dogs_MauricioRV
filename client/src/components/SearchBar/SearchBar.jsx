@@ -72,15 +72,15 @@ const SearchBar = () => {
 
         if (matchingDogs.length === 1) {
           // Si hay una sola coincidencia, navegar a la página de detalle
-          navigate(`/detail/${matchingDogs[0].name}`);
+          navigate(`/detail/${matchingDogs[0].id}`);
         } else if (matchingDogs.length > 0) {
           // Si hay varias coincidencias, mostrar resultados
           setSearchResults(matchingDogs);
         } else {
-          setError('No dogs found with that name.');
+          setError('No dogs found.');
         }
       } catch (error) {
-        setError('Error fetching data.');
+        setError('No dogs found with that name or coincidences.');
       }
     }
   };
@@ -98,7 +98,7 @@ const SearchBar = () => {
           <ul>
             {searchResults.map((result) => (
               <li key={result.id}>
-                <a href={`/detail/${result.name}`}>{result.name}</a>
+                <a href={`/detail/${result.id}`}>{result.name}</a>
               </li>
             ))}
           </ul>

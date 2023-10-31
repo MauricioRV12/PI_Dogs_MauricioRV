@@ -31,11 +31,9 @@ const Form = () => {
 
         // Verificar si hay errores en el formulario
         if (Object.keys(errors).length === 0) {
-            // No hay errores, podemos enviar el formulario
             dispatch(addDog(addNewDog));
             setSuccessMessage("La nueva raza de perro fue creada correctamente");
         } else {
-            // Mostrar mensaje de error
             setSuccessMessage("Falta información o hay campos inválidos");
         }
     };
@@ -53,12 +51,15 @@ const Form = () => {
             
             <label>Height: </label>
             <input type="text" onChange={handleChange} name="height"/>
+            <br/>{errors.e4}
             <br/>
             <label>Weight: </label>
             <input type="text" onChange={handleChange} name="weight"/>
+            <br/>{errors.e5}
             <br/>
             <label>Life Span: </label>
             <input type="text" onChange={handleChange} name="life_span"/>
+            <br/>{errors.e6}
             <br/>
             
             <button type="submit">Create</button>
