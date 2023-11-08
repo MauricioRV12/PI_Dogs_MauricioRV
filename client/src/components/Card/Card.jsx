@@ -2,8 +2,7 @@ import './Card.css'
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({ dog, id = dog.id }) {
-    //console.log(country);
+const Card = ({ dog, id = dog.id }) => {
 
   return (
     <div className="div">
@@ -13,15 +12,15 @@ function Card({ dog, id = dog.id }) {
       </div>
 
       <br/>
-      <div className='image'>
+      <div >
       <Link to={`/detail/${id}`}>
-      <img src={`https://cdn2.thedogapi.com/images/${dog?.reference_image_id}.jpg`} alt={dog.name} />
+      <img src={dog.image.url || dog.image} alt={dog.name} className='image' />
       </Link>
-
       </div>
+
       <div className='cont'>
-      <p>{dog.temperament}</p>
-      <p>Weight: {dog.weight.metric}</p>
+      <p>Temperament: <br/> {dog.temperament}</p>
+      <p>Weight: {typeof dog.weight === 'object' ? dog.weight.metric : dog.weight} {'kg'}</p>
       </div>
 
     </div>

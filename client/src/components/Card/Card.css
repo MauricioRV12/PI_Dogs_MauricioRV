@@ -14,10 +14,11 @@
   }
   
   .name{
-    font-size: 1.0em;
+    font-size: .80em;
     position: absolute;
-    bottom: 3vh;
+    bottom: 53vh;
     color: black;
+    font-family: cursive;
   }
   
   .image{
@@ -28,7 +29,7 @@
   }
 
   .cont{
-    bottom: 1vh;
+    bottom: 3vh;
     position: absolute;
     color: black;
   }

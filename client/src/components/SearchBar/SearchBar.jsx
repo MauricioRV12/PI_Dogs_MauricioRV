@@ -43,7 +43,7 @@
 
 // export default SearchBar;
 
-import './SearchBar.css';
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -86,7 +86,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className='Bar'>
+    <div>
       {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder='What are you looking for?' value={name} onChange={handleChange} />

@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
         case "FILTER":
             return {
                 ...state,
-                filterDogs: action.payload,
+                dogs: action.payload,
             };          
 
         case "ORDER":
@@ -61,7 +61,6 @@ const reducer = (state = initialState, action) => {
                 dogs: action.payload
             };
 
-/********************************************************************* */
         case "CHANGE_DATA_SOURCE":
             return {
                 ...state,

@@ -10,11 +10,7 @@ const Filters = ({
 }) => {
   return (
     <div>
-      <select
-        value={selectedDataSource}
-        onChange={handleDataSourceChange}
-        className="Order"
-      >
+      <select value={selectedDataSource} onChange={handleDataSourceChange} className="Order">
         <option value="API">API</option>
         <option value="DB">DB</option>
       </select>

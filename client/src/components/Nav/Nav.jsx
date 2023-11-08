@@ -1,4 +1,3 @@
-import './Nav.css'
 import { NavLink, useLocation } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -15,7 +14,7 @@ const Nav = () => {
         <div>
             <SearchBar/>
 
-            <div className="Position">
+            <div>
                 <NavLink to='/home' className='Nav'>
                     <button>Home</button>
                 </NavLink>
